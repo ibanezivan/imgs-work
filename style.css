@@ -1,0 +1,80 @@
+/* common */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 100px;
+}
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 30px;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+#desarrolloProblema {
+  margin-top: 90px;
+  border: 1px solid rgb(238, 0, 247);
+  padding: 60px;
+}
+#desarrolloProblema li {
+  margin-bottom: 40px;
+}
+
+/*reglas explicativas*/
+
+/* imágenes sueltas */
+#imagenesSueltas {
+  border: 1px solid black;
+  padding: 60px;
+}
+#imagenesSueltas .inner {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+#imagenesSueltas .inner .box-img {
+  border: 2px dotted rgb(17, 0, 255);
+}
+#imagenesSueltas .inner .box-img img {
+  max-width: 200px;
+  max-height: 200px;
+  display: block; /* si no ponemos esta regla, las imágenes pueden no encajar al 100% en el div*/
+}
+
+/* imágenes como background */
+#imagenesBackGround {
+  margin-top: 90px;
+  border: 1px solid black;
+  padding: 60px;
+}
+#imagenesBackGround .inner {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+#imagenesBackGround .inner .box-img {
+  width: 300px;
+  height: 300px;
+  border: 1px dotted blueviolet;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#imagenesBackGround .inner .box-1 {
+  background-image: url(./img/01.jpg);
+}
+#imagenesBackGround .inner .box-2 {
+  background-image: url(./img/02.jpg);
+}
+#imagenesBackGround .inner .box-3 {
+  background-image: url(./img/03.jpg);
+}
+#imagenesBackGround .inner .box-4 {
+  background-image: url(./img/04.jpg);
+}

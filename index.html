@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo con imágenes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <section id="imagenesSueltas">
+        <h2>Trabajar con imágenes "sueltas" dentro de un div</h2>
+        <p>Ejemplo de cómo añadir imágenes en un div y evitar el desbordamiento. Importante saber que siempre es mejor trabajar con las imágenes a su tamaño exacto, es decir: si en el diseño, la imagen tiene un tamaño de 200px X 200px, lo mejor es cargar la imagen en la web con esa medida. De esta forma conseguimos dos cosas, la primera es que la imagen va a tener el peso exacto (a mayor tamaño de imagen, estas tienen mayor peso, por lo que podemos llenar antes el espacio del server, y haremos que a los navegadores les cueste más renderizar las imágenes y mostrarlas)</p>
+
+        <div class="inner">
+            <div class="box-img box-1"><img src="./img/01.jpg" alt="texto alternativo"></div>
+            <div class="box-img box-2"><img src="./img/02.jpg" alt="texto alternativo"></div>
+            <div class="box-img box-3"><img src="./img/03.jpg" alt="texto alternativo"></div>
+            <div class="box-img box-4"><img src="./img/04.jpg" alt="texto alternativo"></div>
+        </div>
+    </section>
+
+    <section id="imagenesBackGround">
+        <h2>Trabajar con imágenes como background</h2>
+        <p>Ejemplo de cómo añadir las mismas imágenes de las sección anterior, pero como background para evitar que, si estamos trabajando con imágenes de diferentes proporciones, nos permita tener "bloques" del mismo tamaño y un diseño más limpio</p>
+
+        <div class="inner">
+            <div class="box-img box-1"></div>
+            <div class="box-img box-2"></div>
+            <div class="box-img box-3"></div>
+            <div class="box-img box-4"></div>
+        </div>
+    </section>
+
+    <section id="desarrolloProblema">
+        <h2>Explicación</h2>
+
+        <p>Nota como cuando refrescas el navegador, pueden aparecer las imágenes grandes por un segundo, y luego se quedan bien. Esto es porque he usado imágenes de mucho peso, para que veas la importancia de usar imágenes bien optimizadas tanto de tamaño como de peso, para evitar esto. Si ya ocurre en local, imagina lo mal que puede ir en un server. Para recortar imágenes puedes usar alguna herramienta online como <a href="https://www.iloveimg.com/es/editor-de-fotos" target="_blank">I Love IMG</a> y para reducir el peso de imágenes puedes usar <a href="https://tinypng.com/" target="_blank"></a>Tiny PNG</p>
+        <ol>
+            <li>
+                <p>Como se puede ver en la imagen de abajo, si no tratamos las imágenes dentro de un contenedor, se van a desbordar, y será más complicado ajustarlas si cada una de las imágenes tiene un tamaño diferente. Por eso se aconseja editarlas en algún programa para poder dejarlas del mismo tamaño.</p>
+                <img src="./img/example01.png" alt="">
+            </li>
+            <li>
+                <p>En la imagen de abajo se puede ver que ya está resulto el prblema, pero las imágenes, al tener proporciones diferentes, quedan algunas más altas que otras (esto está hecho con display:grid mirar en CSS las reglas añadidas a #imagenesSueltas )</p>
+                <img src="./img/example02.png" alt="">
+            </li>
+            <li>
+                <p>En la imagen de abajo se puede ver que las imágenes tienen todas el mismo tamaño. Para ver este proceso, fíjate en las reglas CSS de #imagenesBackGround. Como extra, si quieres seleccionar qué parte de la imagen quieres mostrar, puedes cambiar los valores de background-position y background-size como se muestra en el ejemplo de abajo. (ahora mismo la regla aplica a las 4 imágenes, así que si queremos ajustar solo una, tener que quitar las reglas de la clase que tienen en común y hacerlo de una en una)</p>
+                <img src="./img/example03.png" alt="">
+            </li>
+        </ol>
+    </section>
+    
+</body>
+</html>
